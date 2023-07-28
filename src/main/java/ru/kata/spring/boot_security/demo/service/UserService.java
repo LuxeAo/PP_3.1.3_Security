@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface UserService {
 
-    void save(User user);
+    void saveUser(User user);
 
     void removeUserById(long id);
 
@@ -16,7 +16,7 @@ public interface UserService {
 
     User getUserById(long id);
 
-    void update(User user);
+    void updateUser(User user);
 
     Optional<User> findByUsername(String username);
 

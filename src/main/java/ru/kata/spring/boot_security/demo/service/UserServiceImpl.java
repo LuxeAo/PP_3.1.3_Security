@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     @Transactional
-    public void save(User user) {
+    public void saveUser(User user) {
         userRepository.save(user);
     }
 
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     @Transactional
-    public void update(User updateUser) {
+    public void updateUser(User updateUser) {
         Optional<User> user = userRepository.findById(updateUser.getId());
         String oldPassword = "";
         if (user.isPresent()) {
