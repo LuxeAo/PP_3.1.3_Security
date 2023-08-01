@@ -35,7 +35,7 @@ public class AdminController {
         if (bindingResult.hasErrors()) {
             return "new";
         }
-        userService.saveUser(user);
+        userService.save(user);
         return "redirect:/admin/allUsers";
     }
 
@@ -51,7 +51,7 @@ public class AdminController {
         if (bindingResult.hasErrors()) {
             return "edit";
         }
-        userService.updateUser(user);
+        userService.update(user);
         return "redirect:/admin/allUsers";
     }
 
