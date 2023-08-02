@@ -28,13 +28,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     private final UserRepositories userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final RoleRepositories roleRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepositories userRepository, @Lazy PasswordEncoder passwordEncoder, RoleRepositories roleRepository) {
+    public UserServiceImpl(UserRepositories userRepository, @Lazy PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
-        this.roleRepository = roleRepository;
+
     }
 
     @Override
